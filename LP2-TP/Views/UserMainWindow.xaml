@@ -1,0 +1,76 @@
+﻿<Window x:Class="LP2_TP.Views.UserMainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LP2_TP.Views"
+        mc:Ignorable="d"
+        ResizeMode="NoResize"
+        Title="Software Management"
+        Height="500" Width="500">
+    <StackPanel
+        Orientation="Vertical"
+        VerticalAlignment="Stretch"
+        HorizontalAlignment="Stretch" Background="#FF646464">
+        <Grid Height="470">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Menu x:Name="mnuUserMain" VerticalAlignment="Top" Grid.RowSpan="1" Grid.ColumnSpan="16">
+                <MenuItem Header="Project">
+                    <MenuItem Header="New Project" Click="miNewProject_Click"/>
+                    <MenuItem Header="MyTasks" Click="miMyTask_Click"/>
+                </MenuItem>
+                <MenuItem Header="Options">
+                    <MenuItem x:Name="miEditProfile" Header="Edit Profile" Click="miEditProfile_Click"/>
+                    <MenuItem x:Name="miLogOut" Header="Log Out" Click="miLogOut_Click"/>
+                    <MenuItem x:Name="miDeleteAccount" Header="Delete Account" Click="miDeleteAccount_Click"></MenuItem>
+                </MenuItem>
+            </Menu>
+            <Label x:Name="lblUsername" Grid.Row="1" Grid.Column="1" Grid.RowSpan="3" Grid.ColumnSpan="8" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Username" FontSize="30" FontWeight="Bold"/>
+            <Label x:Name="lblSurnameName" Grid.Row="4" Grid.Column="1" Grid.RowSpan="2" Grid.ColumnSpan="8" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Surname, Name" FontSize="15" FontWeight="Thin"></Label>
+            <Label x:Name="lblEmail" Grid.Row="5" Grid.Column="1" Grid.RowSpan="2" Grid.ColumnSpan="8" HorizontalAlignment="Left" VerticalAlignment="Top" Content="e-mail@email.com" FontSize="13" FontWeight="Light"></Label>
+            <Label x:Name="lblProjectList" Grid.Row="6" Grid.Column="1" Grid.RowSpan="2"  Grid.ColumnSpan="4" VerticalAlignment="Bottom" Content="Project List:"></Label>
+            <ListBox x:Name="lbxProjectList" Grid.Row="8" Grid.RowSpan="9" Grid.ColumnSpan="15" SelectionChanged="lbxProjectList_SelectionChanged" Margin="10,0,21,0"/>
+            <Button x:Name="btnNewProject" Grid.Row="18" Grid.Column="12" Grid.RowSpan="2" Grid.ColumnSpan="3" Content="New Project" FontWeight="SemiBold" Click="miNewProject_Click"></Button>
+        </Grid>
+    </StackPanel>
+</Window>
